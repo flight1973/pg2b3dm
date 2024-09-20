@@ -1,4 +1,4 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 as build
+﻿FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY . .
 RUN dotnet build "pg2b3dm/pg2b3dm.csproj" -c Release
