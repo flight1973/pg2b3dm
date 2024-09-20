@@ -28,10 +28,8 @@ class Program
             var connectionString = $"Host={o.Host};Username={o.User};Database={o.Database};Port={o.Port};CommandTimeOut=0";
             var istrusted = TrustedConnectionChecker.HasTrustedConnection(connectionString);
             if (!istrusted) {
-                Console.Write($"Password for user {o.User}: ");
-                password = PasswordAsker.GetPassword();
-                connectionString += $";password={password}";
-                Console.WriteLine();
+                password = o.Password;
+                connectionString += $";password='{password}'";
             }
 
             Console.WriteLine($"Start processing {DateTime.Now.ToLocalTime().ToString("s")}....");

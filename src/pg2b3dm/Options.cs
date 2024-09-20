@@ -84,6 +84,6 @@ public class Options
     
     // new option to add a password
     [Option('P', "password", Required = false, HelpText = "Database password")]
-    public string User { get; set; }
+    public string Password { get; set; }
  
 }
