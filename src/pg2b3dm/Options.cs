@@ -81,5 +81,9 @@ public class Options
     // mapbox specific options
     [Option("zoom", Required = false, Default = 15, HelpText = "Zoom level (Mapbox)", SetName = "Mapbox")]
     public int Zoom { get; set; }
+    
+    // new option to add a password
+    [Option('P', "password", Required = false, HelpText = "Database password")]
+    public string User { get; set; }
  
 }
